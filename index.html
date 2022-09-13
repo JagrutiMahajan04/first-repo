@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Calculator</title>
+        <style>
+        .cal-container{
+                   width: 350px;
+                   display: flex;
+                   background-color:dodgerblue;
+                   padding: 20px;
+                   border-radius: 8px;
+                   flex-direction: column;
+                   justify-content: space-between;
+                   box-shadow: 4px 4px 6px black;
+                   
+            }
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;  
+                margin-top: 10px;
+      
+            }
+
+            .btn{
+                height: 60px;
+                width: 70px;
+                font-size: 35px;
+                font-weight: bold;
+                background-color:white;
+                border-radius: 8px;
+                border:2px solid rgba(18, 16, 16, 0.844);
+            }
+            .btn:hover{
+                 cursor:pointer;
+                 box-shadow: 0px 3px 5px rgb(11, 9, 9);
+                 transition: 0.5s;
+            }
+
+            .bg-blue{
+                 background-color:cyan;
+                 color:deeppink;
+                 border:2px solid white;
+            }
+
+            .input-screen{
+                height: 80px;
+                width: 100%;
+                margin-bottom: 8px;
+                font-size: 70px;
+                background-color:rgb(144, 253, 217);
+                font-family:monospace;
+
+            }
+            .brand{
+                font-weight: bold;
+                font-size: 18px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', ;
+                color: white;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="cal-container">
+            <span class="brand"><i>Jyagsum</i></span>
+            <div class="row">
+                <input type="text" id="input" class="input-screen">
+            </div>
+
+            <div class="row">
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn bg-blue">÷</button>
+            </div>
+
+            <div class="row">
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn bg-blue">x</button>
+            </div>
+
+            <div class="row">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn bg-blue">-</button>
+            </div>
+
+            <div class="row">
+                <button class="btn">0</button>
+                <button class="btn bg-blue">.</button>
+                <button class="btn bg-blue">+ </button>
+                <button class="btn bg-blue">=</button>
+            </div>
+           
+
+        </div>
+    </body>
+</html>
