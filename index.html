@@ -2,6 +2,19 @@
 <html>
     <head>
         <title>Digital Calculator</title>
+        <script>
+            function pressButton(buttonValue){
+                let calText = document.querySelector(".input-screen").value +buttonValue + "";
+                document.querySelector(".input-screen").value = calText;             
+            }
+            function calculate(){
+                let calText = document.querySelector(".input-screen").value;
+                document.querySelector(".input-screen").value = eval(calText);               
+            }
+            function clearScreen(){
+                document.querySelector(".input-screen").value = 0;
+            }
+        </script>
         <style>
         .cal-container{
                    width: 350px;
@@ -11,10 +24,8 @@
                    border-radius: 8px;
                    flex-direction: column;
                    justify-content: space-between;
-                   box-shadow: 4px 4px 6px black;
-                   
+                   box-shadow: 4px 4px 6px black;                   
             }
-
             .row{
                 display: flex;
                 flex-direction: row;
@@ -59,9 +70,8 @@
                 font-family:'Lucida Sans', 'Lucida Sans Regular', ;
                 color: white;
             }
-
-            
         </style>
+        
     </head>
     <body>
         <div class="cal-container">
@@ -71,31 +81,31 @@
             </div>
 
             <div class="row">
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn bg-blue">÷</button>
+                <button class="btn" onclick="pressButton(7)">7</button>
+                <button class="btn" onclick="pressButton(8)">8</button>
+                <button class="btn" onclick="pressButton(9)">9</button>
+                <button class="btn bg-blue" onclick="pressButton('/')">÷</button>
             </div>
 
             <div class="row">
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn bg-blue">x</button>
+                <button class="btn" onclick="pressButton(4)">4</button>
+                <button class="btn" onclick="pressButton(5)">5</button>
+                <button class="btn" onclick="pressButton(6)">6</button>
+                <button class="btn bg-blue" onclick="pressButton('*')">x</button>
             </div>
 
             <div class="row">
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn bg-blue">-</button>
+                <button class="btn" onclick="pressButton(1)">1</button>
+                <button class="btn" onclick="pressButton(2)">2</button>
+                <button class="btn" onclick="pressButton(3)">3</button>
+                <button class="btn bg-blue" onclick="pressButton('-')">-</button>
             </div>
 
             <div class="row">
-                <button class="btn">0</button>
-                <button class="btn bg-blue">.</button>
-                <button class="btn bg-blue">+ </button>
-                <button class="btn bg-blue">=</button>
+                <button class="btn" onclick="pressButton(0)">0</button>
+                <button class="btn bg-blue" onclick="clearScreen()">CE</button>
+                <button class="btn bg-blue" onclick="pressButton('+')">+ </button>
+                <button class="btn bg-blue" onclick="calculate()">=</button>
             </div>
            
 
